@@ -1,10 +1,8 @@
 cask "slack-cli" do
-  version "1.2.0"
-  license "MIT"
-
   name "slack-cli"
   desc "Command-line interface for Slack"
   homepage "https://github.com/piekstra/slack-cli"
+  version "1.2.0"
 
   binary "slack-cli"
 
