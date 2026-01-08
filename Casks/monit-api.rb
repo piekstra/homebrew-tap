@@ -2,29 +2,29 @@ cask "monit-api" do
   name "monit-api"
   desc "Command-line interface for Monit APIs"
   homepage "https://github.com/piekstra/monit-api"
-  version "0.3.0"
+  version "0.4.0"
 
   binary "monit-api"
 
   on_macos do
     on_arm do
       url "https://github.com/piekstra/monit-api/releases/download/v#{version}/monit-api_v#{version}_darwin_arm64.tar.gz"
-      sha256 "492b2201971da72ccd9bbaa18362bd47d299cfd99022f09ce5d721bc04f9d51c"
+      sha256 "9e0c470b646d802a4f05daa6dd3ec8ad1bb3662fcd0fa0649b1cfcd7d6e79a1a"
     end
     on_intel do
       url "https://github.com/piekstra/monit-api/releases/download/v#{version}/monit-api_v#{version}_darwin_amd64.tar.gz"
-      sha256 "f1dc78ff755d21a3bb8a54ae5f0609f5e5d30665d00e86bd2016181e5b078394"
+      sha256 "0cc70ba43acdec3be3213ee210f1120083cb70dc2498eb436492ddaffdd0327a"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/piekstra/monit-api/releases/download/v#{version}/monit-api_v#{version}_linux_arm64.tar.gz"
-      sha256 "b09012e10119cda13ca9e3a023b0f2f55586bed02d69220a5585963646b66029"
+      sha256 "bcada30cd894b33acb54c0210b7b39f362ae6d119513aa1d8463e9e6441abbee"
     end
     on_intel do
       url "https://github.com/piekstra/monit-api/releases/download/v#{version}/monit-api_v#{version}_linux_amd64.tar.gz"
-      sha256 "1db548bb7cf4696b8a10210dd0f1414fe2b9bda9890c515da0ef30fd2c8e7982"
+      sha256 "78b637523f8720d8292b57f4cb5524c566d2a00a912a9c5ebe23684254bcd428"
     end
   end
 
