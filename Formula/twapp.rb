@@ -1,10 +1,10 @@
 class Twapp < Formula
   desc "A structured terminal companion for Claude coding sessions"
   homepage "https://github.com/piekstra/twapp"
-  url "https://github.com/piekstra/twapp/releases/download/v0.5.11/twapp-macos-aarch64.tar.gz"
-  sha256 "463c73bacec1904e0824012ef5265f1693c39fe0a169590bec73cee727fe8e88"
+  url "https://github.com/piekstra/twapp/releases/download/v0.5.12/twapp-macos-aarch64.tar.gz"
+  sha256 "5e8bb9758b06eaeeaf9131eb7d3d7e13f29555cd02200a90c69b987751294fc1"
   license "MIT"
-  version "0.5.11"
+  version "0.5.12"
 
   depends_on :macos
   depends_on arch: :arm64
