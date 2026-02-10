@@ -2,18 +2,18 @@ class Twapp < Formula
   desc "A structured terminal companion for Claude coding sessions"
   homepage "https://github.com/piekstra/twapp"
   license "MIT"
-  version "0.5.22"
+  version "0.5.23"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/piekstra/twapp/releases/download/v0.5.22/twapp-macos-aarch64.tar.gz"
-    sha256 "712db006711eecdb5a1c8211ab577591c0842c859b70c2c16bba7fb95b7b12d7"
+    url "https://github.com/piekstra/twapp/releases/download/v0.5.23/twapp-macos-aarch64.tar.gz"
+    sha256 "c4b3df3c913dc4ed80a7291210c50e9ae743864ce25b9f48382ec046105a5f07"
   end
 
   on_intel do
-    url "https://github.com/piekstra/twapp/releases/download/v0.5.22/twapp-macos-x86_64.tar.gz"
-    sha256 "e89b3f7d5b7b69b23c7616607d7299834ea60bf049850592584b775709e24910"
+    url "https://github.com/piekstra/twapp/releases/download/v0.5.23/twapp-macos-x86_64.tar.gz"
+    sha256 "37998d6228450ba74a82b620c5b94b660cb49731317af6af863e437ef35adfcc"
   end
 
   # Homebrew strips single top-level directories from tarballs,
@@ -30,13 +30,13 @@ class Twapp < Formula
 
       To avoid repeated macOS permission prompts, create a local code signing certificate:
         twapp setup-cert
-        twapp install-gui #{prefix}/twapp.app
+        twapp install-gui \#{prefix}/twapp.app
 
       twapp requires the Claude CLI: https://docs.anthropic.com/en/docs/claude-cli
     EOS
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/twapp --version")
+    assert_match version.to_s, shell_output("\#{bin}/twapp --version")
   end
 end
