@@ -2,18 +2,18 @@ class Twapp < Formula
   desc "A structured terminal companion for Claude coding sessions"
   homepage "https://github.com/piekstra/twapp"
   license "MIT"
-  version "0.5.32"
+  version "0.5.33"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/piekstra/twapp/releases/download/v0.5.32/twapp-macos-aarch64.tar.gz"
-    sha256 "8555c19ed1557ad0844f26a72b472b271701de13cdd5b74304d1c00561da034f"
+    url "https://github.com/piekstra/twapp/releases/download/v0.5.33/twapp-macos-aarch64.tar.gz"
+    sha256 "93e80ece52061c0fe79b67f9543a9ba23c94be8e421416e1538606cc2d006f2b"
   end
 
   on_intel do
-    url "https://github.com/piekstra/twapp/releases/download/v0.5.32/twapp-macos-x86_64.tar.gz"
-    sha256 "c89ed1e3b7f9e6ca1fff453e4b3741f33804ec196e682a877b37786d60e50df0"
+    url "https://github.com/piekstra/twapp/releases/download/v0.5.33/twapp-macos-x86_64.tar.gz"
+    sha256 "c6c0c254c40cdec42852b423ee2fb4d10c367e23eac4505a67cd704c7e04010f"
   end
 
   # Homebrew strips single top-level directories from tarballs,
@@ -24,25 +24,13 @@ class Twapp < Formula
     bin.install_symlink prefix/"twapp.app/Contents/MacOS/twapp"
   end
 
-  def post_install
-    # Copy .app bundle to ~/.config/twapp/ and sign it (ad-hoc if no cert)
-    system bin/"twapp", "install-gui", prefix/"twapp.app"
-
-    # Symlink into /Applications so Spotlight can find it
-    app_link = Pathname("/Applications/twapp.app")
-    app_link.unlink if app_link.symlink? || app_link.exist?
-    app_link.make_symlink(prefix/"twapp.app")
-  end
-
   def caveats
     <<~EOS
-      twapp has been installed and is available in Spotlight.
+      twapp has been installed as a macOS app bundle.
 
       To avoid repeated macOS permission prompts, create a local code signing certificate:
         twapp setup-cert
-
-      Then re-run install-gui to apply the certificate:
-        twapp install-gui #{prefix}/twapp.app
+        twapp install-gui \#{prefix}/twapp.app
 
       twapp requires the Claude CLI: https://docs.anthropic.com/en/docs/claude-cli
     EOS
