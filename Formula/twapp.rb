@@ -24,13 +24,25 @@ class Twapp < Formula
     bin.install_symlink prefix/"twapp.app/Contents/MacOS/twapp"
   end
 
+  def post_install
+    # Copy .app bundle to ~/.config/twapp/ and sign it (ad-hoc if no cert)
+    system bin/"twapp", "install-gui", prefix/"twapp.app"
+
+    # Symlink into /Applications so Spotlight can find it
+    app_link = Pathname("/Applications/twapp.app")
+    app_link.unlink if app_link.symlink? || app_link.exist?
+    app_link.make_symlink(prefix/"twapp.app")
+  end
+
   def caveats
     <<~EOS
-      twapp has been installed as a macOS app bundle.
+      twapp has been installed and is available in Spotlight.
 
       To avoid repeated macOS permission prompts, create a local code signing certificate:
         twapp setup-cert
-        twapp install-gui \#{prefix}/twapp.app
+
+      Then re-run install-gui to apply the certificate:
+        twapp install-gui #{prefix}/twapp.app
 
       twapp requires the Claude CLI: https://docs.anthropic.com/en/docs/claude-cli
     EOS
