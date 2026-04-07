@@ -1,19 +1,19 @@
 class Twapp < Formula
-  desc "A structured terminal companion for Claude coding sessions"
+  desc "A structured terminal companion for Claude and Codex coding sessions"
   homepage "https://github.com/piekstra/twapp"
   license "MIT"
-  version "0.5.60"
+  version "0.5.61"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/piekstra/twapp/releases/download/v0.5.60/twapp-macos-aarch64.tar.gz"
-    sha256 "368e09d76268a9acf0e1e96f9b9f7071b1a70f41620ad162cfa26e64abb2bcbf"
+    url "https://github.com/piekstra/twapp/releases/download/v0.5.61/twapp-macos-aarch64.tar.gz"
+    sha256 "87f61da50240ede9f87d703cb8bf6c08232d388b877199bd34147f9a3d15775a"
   end
 
   on_intel do
-    url "https://github.com/piekstra/twapp/releases/download/v0.5.60/twapp-macos-x86_64.tar.gz"
-    sha256 "d4542da6fbe802a10eae7a598acdea83ee2aac745c7f7e5d3cb5c947111dbffc"
+    url "https://github.com/piekstra/twapp/releases/download/v0.5.61/twapp-macos-x86_64.tar.gz"
+    sha256 "80db805b927acf7cb8e9e1412ddd5152c8d1b7da1d44dc756ecb5a94ca8b10fe"
   end
 
   # Homebrew strips single top-level directories from tarballs,
@@ -32,7 +32,9 @@ class Twapp < Formula
         twapp setup-cert
         twapp install-gui \#{prefix}/twapp.app
 
-      twapp requires the Claude CLI: https://docs.anthropic.com/en/docs/claude-cli
+      twapp requires at least one supported agent CLI:
+        Claude CLI: https://docs.anthropic.com/en/docs/claude-cli
+        Codex CLI: https://github.com/openai/codex
     EOS
   end
 
