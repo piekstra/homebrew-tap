@@ -2,18 +2,18 @@ class Twapp < Formula
   desc "A structured terminal companion for Claude and Codex coding sessions"
   homepage "https://github.com/piekstra/twapp"
   license "MIT"
-  version "0.5.96"
+  version "0.5.97"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/piekstra/twapp/releases/download/v0.5.96/twapp-macos-aarch64.tar.gz"
-    sha256 "dbf7f306bfe4d5927d8288b2041c46a85d97528de556fdf6d2e7eff3674fd7bf"
+    url "https://github.com/piekstra/twapp/releases/download/v0.5.97/twapp-macos-aarch64.tar.gz"
+    sha256 "b651b2c2a1c0be20a84d5dfa558f91170a685d2b6db88b276d8fc2831572329d"
   end
 
   on_intel do
-    url "https://github.com/piekstra/twapp/releases/download/v0.5.96/twapp-macos-x86_64.tar.gz"
-    sha256 "24867a22c968a764b21f178493a5fde29743f37731c335566fb6120489cfeb3f"
+    url "https://github.com/piekstra/twapp/releases/download/v0.5.97/twapp-macos-x86_64.tar.gz"
+    sha256 "192223d01bb92952bf310d23d22391a850ce5b7ea330b72108a8e2940d16fc25"
   end
 
   # Homebrew strips single top-level directories from tarballs,
