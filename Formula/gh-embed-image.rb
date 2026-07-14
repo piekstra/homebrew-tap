@@ -1,8 +1,8 @@
 class GhEmbedImage < Formula
   desc "Upload images to GitHub's native asset storage from the CLI"
   homepage "https://github.com/piekstra/github-embed-images"
-  url "https://github.com/piekstra/github-embed-images/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "9de7e3311fc31ff714790b4c0c0fdc40cb7b7d4a9c87bda5cc4ceec1772d4c6a"
+  url "https://github.com/piekstra/github-embed-images/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "18418195b27e486bbcc8476df9c2fdffe61397b451da01798020c647b4a4dca6"
   license "MIT"
 
   depends_on "node"
