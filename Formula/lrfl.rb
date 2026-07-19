@@ -2,7 +2,6 @@ class Lrfl < Formula
   desc "Loxahatchee River District utility accounts, billing, and payments from the CLI"
   homepage "https://github.com/piekstra/loxahatchee-river-fl-cli"
   license any_of: ["MIT", "Apache-2.0"]
-  version "0.4.0"
 
   on_macos do
     on_arm do
