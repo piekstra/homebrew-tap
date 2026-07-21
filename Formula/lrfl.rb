@@ -5,12 +5,12 @@ class Lrfl < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/piekstra/loxahatchee-river-fl-cli/releases/download/v0.4.0/lrfl-aarch64-apple-darwin.tar.gz"
-      sha256 "1b63b19b50ac7824fa436318c1b75c6abacd1e42d3ab59d96cd0315c3196fb94"
+      url "https://github.com/piekstra/loxahatchee-river-fl-cli/releases/download/v0.5.0/lrfl-aarch64-apple-darwin.tar.gz"
+      sha256 "5d81d0482ac8c9e2ad93678c46f3990e3cac3d6820cb8854b5954e52fb18b302"
     end
     on_intel do
-      url "https://github.com/piekstra/loxahatchee-river-fl-cli/releases/download/v0.4.0/lrfl-x86_64-apple-darwin.tar.gz"
-      sha256 "023ac986e051ad32e364666a5de6554504427de0ce294c85175795f9a3ba3fdb"
+      url "https://github.com/piekstra/loxahatchee-river-fl-cli/releases/download/v0.5.0/lrfl-x86_64-apple-darwin.tar.gz"
+      sha256 "de3476ab60cde09a8789a4f8c568d6d92be5cc79b1596e0d45938b6da1fcd502"
     end
   end
 
@@ -19,8 +19,8 @@ class Lrfl < Formula
     depends_on "dbus"
 
     on_intel do
-      url "https://github.com/piekstra/loxahatchee-river-fl-cli/releases/download/v0.4.0/lrfl-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "367a9ea4cd9872ba0d5be8b5012e6d9970e53b2249e54686b49a20e24c853cf8"
+      url "https://github.com/piekstra/loxahatchee-river-fl-cli/releases/download/v0.5.0/lrfl-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d636737b696403789165115ad586746865cfa2fc6671216d3ba13361468a1da5"
     end
   end
 
