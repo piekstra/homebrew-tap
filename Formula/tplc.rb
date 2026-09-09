@@ -2,25 +2,25 @@ class Tplc < Formula
   desc "CLI for TP-Link Cloud API - control Kasa and Tapo smart home devices"
   homepage "https://github.com/piekstra/tplink-cloud-cli"
   license "GPL-3.0"
-  version "0.1.5"
+  version "0.1.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/piekstra/tplink-cloud-cli/releases/download/v0.1.5/tplc-macos-aarch64"
-      sha256 "d5b27563da50d977d0d1ef28fadd447213c0647612e8be3d5b75eea5a978554d"
+      url "https://github.com/piekstra/tplink-cloud-cli/releases/download/v0.1.7/tplc-macos-aarch64"
+      sha256 "9a91283b9740c39f8ddcdca53a5c46dd71b36acbeef38d9c2f98727174d299f4"
     else
-      url "https://github.com/piekstra/tplink-cloud-cli/releases/download/v0.1.5/tplc-macos-x86_64"
-      sha256 "87a81eddc9a4970250ba26ac3a2dbd1252ab0b8b1363b14b1159bad3471abdce"
+      url "https://github.com/piekstra/tplink-cloud-cli/releases/download/v0.1.7/tplc-macos-x86_64"
+      sha256 "e86dde6203d0716ca3381bb05b12403b7792759646f5b7e2df961f5069812884"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/piekstra/tplink-cloud-cli/releases/download/v0.1.5/tplc-linux-aarch64"
-      sha256 "0f0cb47bfbb43fb288f968c421b49fa50a654deca18b5dcddfe05d3e598bc75a"
+      url "https://github.com/piekstra/tplink-cloud-cli/releases/download/v0.1.7/tplc-linux-aarch64"
+      sha256 "92a68670ef6e73ef9fdec494839032975f31494374f8036c6ebddbccb36f7be1"
     else
-      url "https://github.com/piekstra/tplink-cloud-cli/releases/download/v0.1.5/tplc-linux-x86_64"
-      sha256 "640967e7f291774d7041e5a7e2608bf9fd9a94f2de6f6d9ddb35edfc056ea2d2"
+      url "https://github.com/piekstra/tplink-cloud-cli/releases/download/v0.1.7/tplc-linux-x86_64"
+      sha256 "7351705e67eeb943c78a08ad7e06e680907b1949da3802d90ee463cbfa1aeced"
     end
   end
 
