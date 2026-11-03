@@ -30,7 +30,7 @@ class Twapp < Formula
 
       To avoid repeated macOS permission prompts, create a local code signing certificate:
         twapp setup-cert
-        twapp install-gui \#{prefix}/twapp.app
+        twapp install-gui #{prefix}/twapp.app
 
       twapp requires at least one supported agent CLI:
         Claude CLI: https://docs.anthropic.com/en/docs/claude-cli
@@ -39,6 +39,6 @@ class Twapp < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("\#{bin}/twapp --version")
+    assert_match version.to_s, shell_output("#{bin}/twapp --version")
   end
 end
